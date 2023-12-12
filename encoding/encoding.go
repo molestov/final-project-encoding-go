@@ -33,7 +33,6 @@ func (j *JSONData) Encoding() error {
 	jsonData, err := os.ReadFile(j.FileInput)
 	if err != nil {
 		return err
-
 	}
 	err = json.Unmarshal(jsonData, &j.DockerCompose)
 	if err != nil {
@@ -57,7 +56,6 @@ func (y *YAMLData) Encoding() error {
 	yamlData, err := os.ReadFile(y.FileInput)
 	if err != nil {
 		return err
-
 	}
 	err = yaml.Unmarshal(yamlData, &y.DockerCompose)
 	if err != nil {
